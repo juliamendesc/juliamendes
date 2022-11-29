@@ -5,7 +5,7 @@ name: Upgrade NPM packages
 
 on:
   workflow_dispatch:
-  
+
   schedule:
     - cron: '0 0 * * 0'
 
@@ -24,7 +24,6 @@ jobs:
         with:
           node-version: '16.x'
           cache: 'npm'
-
 
       - name: Check for outdated packages 🔍
         id: vars
