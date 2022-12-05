@@ -1,6 +1,6 @@
 {
-  "watchFolder": "src/",
-  "outputFolder": "src/",
+  "watchFolder": "views/",
+  "outputFolder": "views/",
   "sourceMap": true,
   "runOnce": false,
   "enableJs": true
