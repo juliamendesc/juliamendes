@@ -3,6 +3,8 @@ name: Merge PRs Into Main
 
 on:
   push:
+    branches:
+      - 'build-deps*'
 
 jobs:
   main:
