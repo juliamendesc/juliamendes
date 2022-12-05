@@ -15,9 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon/cat-footprint.png" />
       </Head>
 
+      <Header />
       <main className={styles.main}>
-        <Header />
-
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>

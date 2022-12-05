@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  padding: 2rem 1rem;
+  font-size: 1.875rem;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  font-weight: 700;
+  text-decoration: inherit;
+  background-color: transparent;
+  opacity: 1;
+  line-height: 1.5rem;
+}
+.nav_link {
+  position: absolute;
+  cursor: pointer;
+}
+.nav_link:hover {
+  transition: transform 0.2s;
+  transform: scale(1.5);
+}
+/*# sourceMappingURL=Header.module.css.map */
