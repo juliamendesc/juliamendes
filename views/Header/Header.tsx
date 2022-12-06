@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import styles from './Header.module.css'
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons'
 
-export default function Header() {
+export const Header: FC = () => {
   const [isLightMode, setIsLightMode] = useState(false)
 
   function handleCssToggle() {
@@ -29,3 +29,5 @@ export default function Header() {
     </div>
   )
 }
+
+export default Header

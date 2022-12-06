@@ -1,26 +1,18 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import { FC } from 'react'
 import styles from '../styles/Home.module.css'
+import MetaHead from '../views/Head/Head'
 import Header from '../views/Header/Header'
+import MainCard from '../views/MainCard/MainCard'
 
-export default function Home() {
+export const Home: FC = () => {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Julia Mendes</title>
-        <meta
-          name="Julia Mendes - Frontend Developer"
-          content="Julia Mendes Professional Website"
-        />
-        <link rel="icon" href="/favicon/cat-footprint.png" />
-      </Head>
+      <MetaHead />
 
       <Header />
       <main className={styles.main}>
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+        <MainCard />
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -70,3 +62,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
