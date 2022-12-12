@@ -12,11 +12,9 @@ export const Header: FC = () => {
 
   return (
     <div className={styles.container}>
-      <nav className={styles.nav}>
-        <div className={styles.logo}>
-          <a href="" className={styles.nav_link}>
-            {'< juliamendes />'}
-          </a>
+      <nav>
+        <div>
+          <a href="/">{'< juliamendes />'}</a>
         </div>
         <div className={styles.css_mode}>
           {isLightMode ? (

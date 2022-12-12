@@ -1,11 +1,10 @@
 .container {
   margin: 0 auto;
-  max-width: 1024px;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   font-size: 1.875rem;
 }
-.nav {
+.container nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -15,12 +14,35 @@
   opacity: 1;
   line-height: 1.5rem;
 }
-.nav_link {
+.container nav a {
   position: absolute;
   cursor: pointer;
 }
-.nav_link:hover {
+.container nav a:hover {
   transition: transform 0.2s;
   transform: scale(1.5);
+}
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+.css_mode {
+  cursor: pointer;
 }
 /*# sourceMappingURL=Header.module.css.map */
