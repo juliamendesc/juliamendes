@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import styles from './Header.module.css'
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons'
 
-export default function Header() {
+export const Header: FC = () => {
   const [isLightMode, setIsLightMode] = useState(false)
 
   function handleCssToggle() {
@@ -12,11 +12,9 @@ export default function Header() {
 
   return (
     <div className={styles.container}>
-      <nav className={styles.nav}>
-        <div className={styles.logo}>
-          <a href="" className={styles.nav_link}>
-            {'< juliamendes />'}
-          </a>
+      <nav>
+        <div>
+          <a href="/">{'< juliamendes />'}</a>
         </div>
         <div className={styles.css_mode}>
           {isLightMode ? (
@@ -29,3 +27,5 @@ export default function Header() {
     </div>
   )
 }
+
+export default Header
