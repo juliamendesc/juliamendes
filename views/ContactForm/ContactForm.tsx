@@ -23,9 +23,6 @@ export const ContactForm: FC = () => {
   return (
     <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
       <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
-        <Tabs.Trigger value="tab1">
-          <h2>Get in touch</h2>
-        </Tabs.Trigger>
         <Tabs.Content value="tab1">
           <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset className={styles.Fieldset}>
