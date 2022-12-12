@@ -2,6 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+.notFound__container p {
+  padding: 0.5rem;
+}
+.notFound__container a {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.notFound__container a svg {
+  margin-right: 0.5rem;
+  vertical-align: top;
+}
+.notFound__container span {
+  display: inline-block;
+  font-weight: 700;
 }
 /*# sourceMappingURL=PageNotFound.module.css.map */

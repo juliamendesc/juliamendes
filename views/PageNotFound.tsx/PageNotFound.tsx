@@ -13,15 +13,16 @@ export const PageNotFound: FC = () => {
         width={700}
         height={700}
       />
-      <div className={styles.notFound__content}>
-        Sorry, the page you are looking for does not exist.
-      </div>
-      <div className={styles.notFound__link}>
-        <Link href="/" passHref>
-          <HomeIcon />
-          Go to Home
-        </Link>
-      </div>
+
+      <p>Sorry, the page you are looking for does not exist.</p>
+      <p> Maybe you are looking for something else?</p>
+
+      <Link href="/" passHref>
+        <span>
+          <HomeIcon width={24} height={24} />
+          Go back Home
+        </span>
+      </Link>
     </section>
   )
 }
