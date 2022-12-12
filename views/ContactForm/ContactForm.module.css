@@ -1,0 +1,82 @@
+.TabsRoot {
+  display: flex;
+  width: 500px;
+}
+.TabsRoot .ButtonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.TabsRoot .TabsContent {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  outline: none;
+}
+.TabsRoot .TabsContent:focus {
+  box-shadow: 0 0 0 2px var(--mauve8);
+}
+.TabsRoot .TabsList {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+.TabsRoot .TabsList h2 {
+  margin-bottom: 1rem;
+}
+.TabsRoot fieldset {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.TabsRoot label {
+  font-size: 13px;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: var(--violet12);
+  display: block;
+}
+.TabsRoot input,
+.TabsRoot textarea {
+  flex: 1 0 auto;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--violet11);
+  box-shadow: 0 0 0 1px var(--violet7);
+}
+.TabsRoot input:focus,
+.TabsRoot textarea:focus {
+  box-shadow: 0 0 0 2px var(--violet8);
+}
+.TabsRoot input {
+  height: 2rem;
+}
+.TabsRoot textarea {
+  height: 10rem;
+}
+.TabsRoot .Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+  background-color: #ffcece;
+  color: #680747;
+}
+.TabsRoot .Button:hover {
+  background-color: #ffc1c8;
+}
+.TabsRoot .Button:focus {
+  box-shadow: 0 0 0 2px #ffc1c8;
+}
