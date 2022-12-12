@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons'
 
 export const Header: FC = () => {
-  const [isLightMode, setIsLightMode] = useState(false)
+  const [isLightMode, setIsLightMode] = useState<boolean>(false)
 
   function handleCssToggle() {
     setIsLightMode(!isLightMode)
