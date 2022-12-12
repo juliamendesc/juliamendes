@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import PageNotFound from '../views/PageNotFound.tsx/PageNotFound'
+import PageNotFound from '../views/PageNotFound/PageNotFound'
 
 export const PageNotFoundPage: FC = () => {
   return <PageNotFound />
