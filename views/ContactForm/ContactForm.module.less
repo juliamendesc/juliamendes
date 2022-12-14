@@ -23,34 +23,34 @@
 
   .TabsList {
     width: 100%;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
 
     h2 {
       margin-bottom: 1rem;
     }
+
+    @media (max-width: 510px) {
+      align-items: center;
+    }
   }
 
   fieldset {
     margin-bottom: 15px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
   }
 
   label {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1;
     margin-bottom: 10px;
     color: var(--violet12);
-    display: block;
   }
 
   input,
   textarea {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     border-radius: 4px;
     padding: 0 10px;
     font-size: 15px;

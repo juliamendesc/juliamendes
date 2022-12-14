@@ -15,12 +15,16 @@ export const MainCard: FC = () => {
           </p>
           <button>Contact me!</button>
         </div>
-        <Image
-          src="/assets/developer.svg"
-          alt="Imagem de uma mulher programando"
-          width={500}
-          height={500}
-        />
+        <div className={styles.imageCard}>
+          <Image
+            src="/assets/developer.svg"
+            alt="Imagem de uma mulher programando"
+            className={styles.image}
+            fill
+            sizes="(max-width: 600px) 100vw, 600px"
+            priority
+          />
+        </div>
       </div>
     </section>
   )
