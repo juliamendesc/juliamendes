@@ -10,7 +10,6 @@
   flex-wrap: nowrap;
   font-weight: 700;
   text-decoration: inherit;
-  background-color: transparent;
   opacity: 1;
   line-height: 1.5rem;
 }
@@ -45,4 +44,3 @@
 .css_mode {
   cursor: pointer;
 }
-/*# sourceMappingURL=Header.module.css.map */

@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import { FC } from 'react'
 import styles from '../styles/Home.module.css'
-import ContactForm from '../views/ContactForm/ContactForm'
-import MetaHead from '../views/Head/Head'
-import Header from '../views/Header/Header'
-import MainCard from '../views/MainCard/MainCard'
+import ContactForm from '../components/contact-form/ContactForm'
+import MetaHead from '../components/head/Head'
+import Header from '../components/nav-bar/Header'
+import MainCard from '../components/main-card/MainCard'
+import Project from '../components/projects/project'
+import projects from '../shared/projects'
 
 export const Home: FC = () => {
   return (
@@ -15,6 +17,7 @@ export const Home: FC = () => {
       <main className={styles.main}>
         <MainCard />
 
+        <Project {...projects[0]} />
         <section className={styles.contactForm}>
           <h1>Get in touch</h1>
         </section>

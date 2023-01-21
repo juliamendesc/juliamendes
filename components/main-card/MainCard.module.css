@@ -37,17 +37,17 @@
   line-height: 1.5rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--shadow--secondary--dark);
+  color: var(--text--primary--dark);
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .mainCard div button:hover {
-  background-color: #fff;
-  color: #ff63ac;
-  border: 1px solid #ff63ac;
+  background-color: var(--shadow--primary--dark);
+  box-shadow: 0 0 0 1px var(--shadow--secondary--dark);
+  color: var(--text--primary--light);
 }
 .mainCard .imageCard {
   position: relative !important;
