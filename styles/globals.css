@@ -1,25 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@import '@radix-ui/colors/blackA.css';
-@import '@radix-ui/colors/green.css';
-@import '@radix-ui/colors/mauve.css';
-@import '@radix-ui/colors/violet.css';
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
 
 html,
 body {
   font-family: inherit;
   width: 100vw;
   height: 100vh;
-}
-
-*,
-::after,
-::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  border: 0 solid #e2e8f0;
-  font-family: 'Roboto', sans-serif;
 }
 
 input,
@@ -45,4 +40,18 @@ a {
 :root {
   scroll-behavior: smooth;
   scroll-padding-top: 2rem;
+
+  --background--dark: linear-gradient(
+    hsl(214, 59.4%, 15.3%),
+    hsl(211, 85.1%, 27.4%)
+  );
+  --background--light: linear-gradient(rgb(247, 238, 238), #fdcbf1);
+
+  --text--primary--light: hsl(206, 98%, 95.8%);
+  --text--primary--dark: hsl(212, 35%, 9.2%);
+  --text--secondary--dark: #f5c7f7;
+  --shadow--primary--dark: #5e63b6;
+  --shadow--secondary--dark: #a393eb;
+  --shadow--tertiary--dark: #ebc6ff;
+  --border--primary--light: #eaeaea;
 }
