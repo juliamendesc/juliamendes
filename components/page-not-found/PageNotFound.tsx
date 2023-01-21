@@ -1,8 +1,8 @@
-import { HomeIcon } from '@radix-ui/react-icons'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FC } from 'react'
-import styles from './PageNotFound.module.css'
+import { HomeIcon } from '@radix-ui/react-icons';
+import Image from 'next/image';
+import Link from 'next/link';
+import { FC } from 'react';
+import styles from './PageNotFound.module.css';
 
 export const PageNotFound: FC = () => {
   return (
@@ -24,7 +24,7 @@ export const PageNotFound: FC = () => {
         </span>
       </Link>
     </section>
-  )
-}
+  );
+};
 
-export default PageNotFound
+export default PageNotFound;

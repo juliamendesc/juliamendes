@@ -1,20 +1,21 @@
-import { FC, useState } from 'react'
-import styles from './Header.module.css'
-import { SunIcon, MoonIcon } from '@radix-ui/react-icons'
+import { FC, useState } from 'react';
+import styles from './Header.module.css';
+import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
 
 export const Header: FC = () => {
-  const [isLightMode, setIsLightMode] = useState<boolean>(false)
+  const [isLightMode, setIsLightMode] = useState<boolean>(false);
 
   function handleCssToggle() {
-    setIsLightMode(!isLightMode)
-    console.log(isLightMode)
+    setIsLightMode(!isLightMode);
+    console.log(isLightMode);
   }
 
   return (
     <div className={styles.container}>
       <nav>
         <div>
-          <a href="/">{'< juliamendes />'}</a>
+          <Link href="/">{'< juliamendes />'}</Link>
         </div>
         <div className={styles.css_mode}>
           {isLightMode ? (
@@ -25,7 +26,7 @@ export const Header: FC = () => {
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

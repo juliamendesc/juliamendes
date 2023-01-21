@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { FC } from 'react'
-import styles from './MainCard.module.css'
+import Image from 'next/image';
+import { FC } from 'react';
+import styles from './MainCard.module.css';
 
 export const MainCard: FC = () => {
   return (
@@ -27,7 +27,7 @@ export const MainCard: FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default MainCard
+export default MainCard;
