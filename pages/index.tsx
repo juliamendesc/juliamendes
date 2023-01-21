@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import { FC } from 'react'
-import styles from '../styles/Home.module.css'
-import ContactForm from '../components/contact-form/ContactForm'
-import MetaHead from '../components/head/Head'
-import Header from '../components/nav-bar/Header'
-import MainCard from '../components/main-card/MainCard'
-import Project from '../components/projects/project'
-import projects from '../shared/projects'
+import Image from 'next/image';
+import { FC } from 'react';
+import styles from '../styles/Home.module.css';
+import ContactForm from '../components/contact-form/ContactForm';
+import MetaHead from '../components/head/Head';
+import Header from '../components/nav-bar/Header';
+import MainCard from '../components/main-card/MainCard';
+import Project from '../components/projects/project';
+import projects from '../shared/projects';
 
 export const Home: FC = () => {
   return (
@@ -37,7 +37,7 @@ export const Home: FC = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
