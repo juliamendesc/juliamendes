@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import React, { FC, useState } from 'react'
-import styles from './Projects.module.css'
+import Image from 'next/image';
+import React, { FC } from 'react';
+import styles from './Projects.module.css';
 
 export interface ProjectProps {
-  title: string
-  icon: string
-  stack: string[]
+  title: string;
+  icon: string;
+  stack: string[];
   // description: string
   // skills: string[]
   // images: string[]
@@ -14,12 +14,12 @@ export interface ProjectProps {
 }
 
 export const Project: FC<ProjectProps> = ({ title, icon, stack }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(prev => !prev)
-    document.documentElement.style.overflowY = 'hidden'
-  }
+  // const openModal = () => {
+  //   setIsModalOpen((prev) => !prev);
+  //   document.documentElement.style.overflowY = 'hidden';
+  // };
 
   return (
     <section className={styles.project_wrapper}>
@@ -38,7 +38,7 @@ setIsModalOpen={setIsModalOpen}
 project={project}
 /> */}
     </section>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

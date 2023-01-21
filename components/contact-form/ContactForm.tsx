@@ -1,30 +1,31 @@
-import { FC } from 'react'
-import styles from './ContactForm.module.css'
-import { useForm, SubmitHandler } from 'react-hook-form'
-import * as Tabs from '@radix-ui/react-tabs'
+import { FC } from 'react';
+import styles from './ContactForm.module.css';
+import { useForm } from 'react-hook-form';
+import * as Tabs from '@radix-ui/react-tabs';
 
 type Inputs = {
-  name: string
-  email: string
-  subject: string
-  message: string
-}
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 export const ContactForm: FC = () => {
   const {
     register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = data => {
-    console.log('data', data)
-  }
+    // handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  // const onSubmit: SubmitHandler<Inputs> = (data) => {
+  //   console.log('data', data);
+  // };
 
   return (
     <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
       <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
         <Tabs.Content value="tab1">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form /*onSubmit={handleSubmit(onSubmit)}*/>
             <fieldset className={styles.Fieldset}>
               <label htmlFor="name" className={styles.Label}>
                 Your name
@@ -48,7 +49,8 @@ export const ContactForm: FC = () => {
                 className={styles.Input}
                 {...register('email', {
                   required: true,
-                  pattern: /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm
+                  pattern:
+                    /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm,
                   /*
 									The email shouldn't contain spaces into the string
 									The email shouldn't contain special chars (<:, *,etc)
@@ -70,7 +72,7 @@ export const ContactForm: FC = () => {
                 {...register('subject', {
                   required: true,
                   minLength: 3,
-                  maxLength: 50
+                  maxLength: 50,
                 })}
               />
               {errors.subject && <p>Please type a subject 📝.</p>}
@@ -84,7 +86,7 @@ export const ContactForm: FC = () => {
                 {...register('message', {
                   required: true,
                   minLength: 10,
-                  maxLength: 500
+                  maxLength: 500,
                 })}
               />
               {errors.message && <p>Please type a nice message 🤗.</p>}
@@ -98,7 +100,7 @@ export const ContactForm: FC = () => {
         </Tabs.Content>
       </Tabs.List>
     </Tabs.Root>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
