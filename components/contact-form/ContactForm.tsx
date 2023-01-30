@@ -10,7 +10,7 @@ type Inputs = {
   message: string;
 };
 
-export const ContactForm: FC = () => {
+const ContactForm: FC = () => {
   const {
     register,
     // handleSubmit,

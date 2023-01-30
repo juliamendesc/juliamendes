@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import styles from './MainCard.module.css';
 
-export const MainCard: FC = () => {
+const MainCard: FC = () => {
   return (
     <section className={styles.mainCard}>
       <div>
