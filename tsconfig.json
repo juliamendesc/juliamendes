@@ -20,7 +20,11 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/page-not-found"
+    ".eslintrc.js",
+    "src",
+    "shared",
+    "components",
+    "styles"
   ],
   "exclude": ["node_modules"]
 }
