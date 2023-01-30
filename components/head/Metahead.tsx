@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { FC } from 'react';
 
-export const MetaHead: FC = () => {
+const MetaHead: FC = () => {
   return (
     <Head>
       <title>Julia Mendes</title>
