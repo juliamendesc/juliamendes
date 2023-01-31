@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import styles from './ContactForm.module.css';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import * as Tabs from '@radix-ui/react-tabs';
 
 type Inputs = {
@@ -11,21 +11,55 @@ type Inputs = {
 };
 
 const ContactForm: FC = () => {
+  const [isMessageSent, setIsMessageSent] = useState(false);
   const {
     register,
-    // handleSubmit,
+    handleSubmit,
+    // reset,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({ shouldUseNativeValidation: true });
 
-  // const onSubmit: SubmitHandler<Inputs> = (data) => {
-  //   console.log('data', data);
-  // };
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const { name, email, subject, message } = data;
+
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, subject, message }),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          console.log('Message sent successfully! 🎉', res);
+          setIsMessageSent(true);
+          return res.json();
+        }
+        console.log('Message not sent', res);
+      })
+      .catch((err) => {
+        console.log('Error sending message', err);
+      });
+  };
+
+  console.log('isMessageSent', isMessageSent);
+
+  // useEffect(() => {
+  //   if (isMessageSent) {
+  //     reset;
+  //   }
+
+  //   return () => {
+  //     second;
+  //   };
+  // }, [third]);
 
   return (
     <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
       <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
         <Tabs.Content value="tab1">
-          <form /*onSubmit={handleSubmit(onSubmit)}*/>
+          <form onSubmit={(data) => void handleSubmit(onSubmit)(data)}>
             <fieldset className={styles.Fieldset}>
               <label htmlFor="name" className={styles.Label}>
                 Your name
@@ -50,7 +84,7 @@ const ContactForm: FC = () => {
                 {...register('email', {
                   required: true,
                   pattern:
-                    /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gm,
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
                   /*
 									The email shouldn't contain spaces into the string
 									The email shouldn't contain special chars (<:, *,etc)
