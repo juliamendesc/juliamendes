@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './ContactForm.module.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as Tabs from '@radix-ui/react-tabs';
@@ -15,9 +15,17 @@ const ContactForm: FC = () => {
   const {
     register,
     handleSubmit,
-    // reset,
+    reset,
     formState: { errors },
-  } = useForm<Inputs>({ shouldUseNativeValidation: true });
+  } = useForm<Inputs>({
+    shouldUseNativeValidation: true,
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+  });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const { name, email, subject, message } = data;
@@ -45,15 +53,12 @@ const ContactForm: FC = () => {
 
   console.log('isMessageSent', isMessageSent);
 
-  // useEffect(() => {
-  //   if (isMessageSent) {
-  //     reset;
-  //   }
-
-  //   return () => {
-  //     second;
-  //   };
-  // }, [third]);
+  useEffect(() => {
+    if (isMessageSent) {
+      setIsMessageSent(false);
+      reset();
+    }
+  }, [isMessageSent, reset]);
 
   return (
     <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">

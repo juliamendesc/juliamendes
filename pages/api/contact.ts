@@ -7,6 +7,7 @@ const {
   OAUTH_CLIENT_ID,
   OAUTH_SECRET,
   OAUTH_ACCESS_TOKEN,
+  GMAIL_FORWARD_TO,
 } = process.env;
 
 const transporter = nodemailer.createTransport({
@@ -26,8 +27,8 @@ const transporter = nodemailer.createTransport({
 
 export default function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   const mailData = {
-    from: 'Website Contact Form <contact.juliamendesc@gmail.com>',
-    to: 'xulia10@gmail.com',
+    from: `Website Contact Form <${GMAIL_USER}>`,
+    to: GMAIL_FORWARD_TO,
     subject: `Message From ${req.body.name}`,
     text: `${req.body.message} \n\n Sent from: ${req.body.email}`,
     html: `<div>${req.body.message}</div><p>Sent from:
