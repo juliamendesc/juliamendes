@@ -1,9 +1,10 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import styles from './Projects.module.css';
+import styles from './ProjectCard.module.css';
 import ProjectModal from './ProjectModal';
 
 export interface ProjectProps {
+  id: number;
   title: string;
   icon: string;
   stack: string[];
@@ -14,7 +15,7 @@ export interface ProjectProps {
   githubLink: string;
 }
 
-const Project: FC<ProjectProps> = (project) => {
+const ProjectCard = (project: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -53,4 +54,4 @@ const Project: FC<ProjectProps> = (project) => {
   );
 };
 
-export default Project;
+export default ProjectCard;

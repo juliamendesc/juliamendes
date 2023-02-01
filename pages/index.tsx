@@ -3,10 +3,10 @@ import styles from '../styles/Home.module.css';
 import ContactForm from '../components/contact-form/ContactForm';
 import Header from '../components/nav-bar/Header';
 import MainCard from '../components/main-card/MainCard';
-import Project from '../components/projects/Project';
 import projects from '../shared/projects';
 import MetaHead from 'components/head/Metahead';
 import Footer from 'components/footer/Footer';
+import ProjectsSection from 'components/projects/ProjectsSection';
 
 export const Home: FC = () => {
   return (
@@ -17,7 +17,7 @@ export const Home: FC = () => {
       <main className={styles.main}>
         <MainCard />
 
-        <Project {...projects[0]} />
+        <ProjectsSection projects={projects} />
         <section className={styles.contactForm}>
           <h1>Get in touch</h1>
         </section>
