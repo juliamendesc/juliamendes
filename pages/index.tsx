@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FC } from 'react';
 import styles from '../styles/Home.module.css';
 import ContactForm from '../components/contact-form/ContactForm';
@@ -7,6 +6,7 @@ import MainCard from '../components/main-card/MainCard';
 import Project from '../components/projects/Project';
 import projects from '../shared/projects';
 import MetaHead from 'components/head/Metahead';
+import Footer from 'components/footer/Footer';
 
 export const Home: FC = () => {
   return (
@@ -24,18 +24,7 @@ export const Home: FC = () => {
         <ContactForm />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 };

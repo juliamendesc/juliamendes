@@ -45,20 +45,6 @@
   justify-content: center;
   align-items: center;
 }
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border--primary--light);
-  justify-content: center;
-  align-items: center;
-}
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
 .title a {
   text-decoration: none;
 }
@@ -75,9 +61,6 @@
 }
 @media (prefers-color-scheme: dark) {
   .card,
-  .footer {
-    border-color: #222;
-  }
   .logo img {
     filter: invert(1);
   }
