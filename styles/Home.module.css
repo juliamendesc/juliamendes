@@ -65,3 +65,7 @@
     filter: invert(1);
   }
 }
+.container {
+  background: var(--background--dark);
+  color: var(--text--primary--light);
+}

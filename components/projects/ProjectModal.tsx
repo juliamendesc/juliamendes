@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { ProjectProps } from './Project';
+import { ProjectProps } from './ProjectCard';
 import styles from './ProjectModal.module.css';
 import Image from 'next/image';
 import Link from 'next/link';

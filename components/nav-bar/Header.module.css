@@ -18,8 +18,8 @@
   cursor: pointer;
 }
 .container nav a:hover {
-  transition: transform 0.2s;
-  transform: scale(1.5);
+  transition: transform 0.5s;
+  transform: scale(1.25);
 }
 @media (min-width: 480px) {
   .container {
