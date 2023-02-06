@@ -1,5 +1,6 @@
 .mainCard {
   margin: 0 auto;
+  position: relative;
 
   div {
     width: 100%;
@@ -40,12 +41,14 @@
       line-height: 1.5rem;
       border: none;
       border-radius: 0.5rem;
-      background-color: #000;
-      color: #fff;
       font-size: 1.2rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      color: #fff;
+      background-color: var(--shadow--secondary--dark);
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+        border 0.2s ease-in-out;
+      position: absolute;
 
       &:hover {
         background-color: #fff;

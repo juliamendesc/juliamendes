@@ -27,10 +27,12 @@
   @media (max-height: 430px) {
     flex-direction: row;
   }
+  z-index: 1000;
 }
 
 .project_image {
   width: 100%;
+
   position: relative;
   display: flex;
   align-items: center;
@@ -44,7 +46,8 @@
 }
 
 .current_image {
-  height: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .slider {
@@ -103,8 +106,7 @@
     content: '';
     display: block;
     float: left;
-    // background: url(${process.env.PUBLIC_URL + "/assets/red-triangle.svg"})
-    //   no-repeat;
+    background: url('/assets/play.svg') no-repeat;
     background-size: contain;
     height: 15px;
     padding-right: 20px;

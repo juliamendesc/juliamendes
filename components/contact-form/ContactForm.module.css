@@ -50,7 +50,7 @@
   font-size: 15px;
   line-height: 1.75;
   color: var(--violet11);
-  box-shadow: 0 0 0 1px var(--shadow--tertiary--dark);
+  box-shadow: 0 0 0 1px var(--shadow--primary--dark);
 }
 .TabsRoot input:focus,
 .TabsRoot textarea:focus {
@@ -73,14 +73,15 @@
   line-height: 1;
   font-weight: 500;
   height: 35px;
-  background-color: #ffcece;
-  color: #680747;
+  color: #fff;
+  background-color: var(--shadow--secondary--dark);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border 0.2s ease-in-out;
 }
 .TabsRoot .Button:hover {
-  background-color: #ffc1c8;
-}
-.TabsRoot .Button:focus {
-  box-shadow: 0 0 0 2px #ff63ac;
+  background-color: #fff;
+  color: #ff63ac;
+  border: 1px solid #ff63ac;
 }
 .contactForm {
   margin: 2rem 1rem 0 0;
@@ -119,4 +120,9 @@
   .contactForm {
     width: 1280px;
   }
+}
+.errorMessage {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }

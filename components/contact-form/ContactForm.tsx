@@ -51,8 +51,6 @@ const ContactForm: FC = () => {
       });
   };
 
-  console.log('isMessageSent', isMessageSent);
-
   useEffect(() => {
     if (isMessageSent) {
       setIsMessageSent(false);
@@ -62,7 +60,7 @@ const ContactForm: FC = () => {
 
   return (
     <>
-      <section className={styles.contactForm}>
+      <section className={styles.contactForm} id="contact">
         <h1>Get in touch</h1>
       </section>
       <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
@@ -78,7 +76,7 @@ const ContactForm: FC = () => {
                   {...register('name', { required: true, minLength: 3 })}
                 />
                 {errors.name && (
-                  <p>
+                  <p className={styles.errorMessage}>
                     {`I wouldn't like to miss your name. Please don't forget to include
             it 🥺.`}
                   </p>
@@ -103,7 +101,9 @@ const ContactForm: FC = () => {
                   })}
                 />
                 {errors.email && (
-                  <p>{`Please insert a valid email to ensure I'm able to reply 📨.`}</p>
+                  <p
+                    className={styles.errorMessage}
+                  >{`Please insert a valid email to ensure I'm able to reply 📨.`}</p>
                 )}
               </fieldset>
               <fieldset className={styles.Fieldset}>
@@ -118,7 +118,11 @@ const ContactForm: FC = () => {
                     maxLength: 50,
                   })}
                 />
-                {errors.subject && <p>Please type a subject 📝.</p>}
+                {errors.subject && (
+                  <p className={styles.errorMessage}>
+                    Please type a subject 📝.
+                  </p>
+                )}
               </fieldset>
               <fieldset className={styles.Fieldset}>
                 <label htmlFor="message" className={styles.Label}>
@@ -132,7 +136,11 @@ const ContactForm: FC = () => {
                     maxLength: 500,
                   })}
                 />
-                {errors.message && <p>Please type a nice message 🤗.</p>}
+                {errors.message && (
+                  <p className={styles.errorMessage}>
+                    Please type a nice message 🤗.
+                  </p>
+                )}
               </fieldset>
               <div className={styles.ButtonWrapper}>
                 <button type="submit" className={styles.Button}>

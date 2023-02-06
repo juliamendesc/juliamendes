@@ -1,5 +1,6 @@
 .mainCard {
   margin: 0 auto;
+  position: relative;
 }
 .mainCard div {
   width: 100%;
@@ -37,17 +38,19 @@
   line-height: 1.5rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: var(--shadow--secondary--dark);
-  color: var(--text--primary--dark);
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  color: #fff;
+  background-color: var(--shadow--secondary--dark);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border 0.2s ease-in-out;
+  position: absolute;
 }
 .mainCard div button:hover {
-  background-color: var(--shadow--primary--dark);
-  box-shadow: 0 0 0 1px var(--shadow--secondary--dark);
-  color: var(--text--primary--light);
+  background-color: #fff;
+  color: #ff63ac;
+  border: 1px solid #ff63ac;
 }
 .mainCard .imageCard {
   position: relative !important;
@@ -89,4 +92,3 @@
     max-width: 1280px;
   }
 }
-/*# sourceMappingURL=MainCard.module.css.map */
