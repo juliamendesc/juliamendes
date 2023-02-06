@@ -1,0 +1,5 @@
+{
+  "installCommand": "npm install -g",
+  "outputDirectory": "build",
+  "buildCommand": "next build"
+}
