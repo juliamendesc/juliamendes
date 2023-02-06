@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { FC } from 'react';
 import styles from './MainCard.module.css';
+import React, { FC } from 'react';
+import Link from 'next/link';
 
 const MainCard: FC = () => {
   return (
@@ -13,7 +14,9 @@ const MainCard: FC = () => {
             collection of experiences and achievements, I decided to pursue a
             career in programming, and this was the best decision ever.
           </p>
-          <button>Contact me!</button>
+          <Link href="#contact" scroll={true}>
+            <button>Contact me!</button>
+          </Link>
         </div>
         <div className={styles.imageCard}>
           <Image

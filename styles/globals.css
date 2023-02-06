@@ -55,3 +55,7 @@ a {
   --shadow--tertiary--dark: #ebc6ff;
   --border--primary--light: #eaeaea;
 }
+
+#portal {
+  overflow-x: hidden;
+}

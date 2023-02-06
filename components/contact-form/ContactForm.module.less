@@ -56,7 +56,7 @@
     font-size: 15px;
     line-height: 1.75;
     color: var(--violet11);
-    box-shadow: 0 0 0 1px var(--shadow--tertiary--dark);
+    box-shadow: 0 0 0 1px var(--shadow--primary--dark);
 
     &:focus {
       box-shadow: 0 0 0 2px var(--violet8);
@@ -83,14 +83,15 @@
     line-height: 1;
     font-weight: 500;
     height: 35px;
-    background-color: #ffcece;
-    color: #680747;
+    color: #fff;
+    background-color: var(--shadow--secondary--dark);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+      border 0.2s ease-in-out;
 
     &:hover {
-      background-color: #ffc1c8;
-    }
-    &:focus {
-      box-shadow: 0 0 0 2px #ff63ac;
+      background-color: #fff;
+      color: #ff63ac;
+      border: 1px solid #ff63ac;
     }
   }
 }
@@ -130,4 +131,10 @@
   @media (min-width: 1280px) {
     width: 1280px;
   }
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }

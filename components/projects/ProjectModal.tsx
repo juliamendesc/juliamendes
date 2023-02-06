@@ -65,6 +65,9 @@ const ProjectModal: FC<ProjectModalProps> = ({
                   src={project.images[currentImage]}
                   alt="project"
                   className={styles.current_image}
+                  width={500}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw "
                 />
 
                 {project.images.length > 1 && (
@@ -74,18 +77,14 @@ const ProjectModal: FC<ProjectModalProps> = ({
                       role="presentation"
                       onClick={() => updateImage(-1)}
                       style={{ left: '0px' }}
-                    >
-                      <Image src="favicon.ico" alt="icon" fill />
-                    </div>
+                    ></div>
 
                     <div
                       className={styles.slider}
                       role="presentation"
                       onClick={() => updateImage(1)}
                       style={{ right: '0px' }}
-                    >
-                      <Image src="favicon.ico" alt="icon" fill />
-                    </div>
+                    ></div>
                   </>
                 )}
               </div>
@@ -102,7 +101,7 @@ const ProjectModal: FC<ProjectModalProps> = ({
                 </p>
 
                 <p className={styles.skills}>
-                  <strong>What I learned:</strong> {project.skills.join(' / ')}
+                  <strong>What I learned:</strong> {project.learned}
                 </p>
               </div>
 

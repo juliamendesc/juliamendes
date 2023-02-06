@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
 }
 
 .project_title {
@@ -39,15 +40,18 @@
 
 .project_button {
   font-weight: 400;
-  // font-family: 'Sen, sans-serif';
 
   padding: 10px;
   cursor: pointer;
   overflow-y: hidden;
 
   border-radius: 2px;
-  border: 1px solid #ef233c;
-  background: linear-gradient(to left, #ef233c 0%, #ef233c 100%);
+  border: 1px solid var(--shadow--primary--dark);
+  background: linear-gradient(
+    to left,
+    var(--shadow--secondary--dark) 0%,
+    var(--shadow--secondary--dark) 100%
+  );
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 100% 0px;

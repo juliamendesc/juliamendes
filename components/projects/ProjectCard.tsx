@@ -9,8 +9,10 @@ export interface ProjectProps {
   icon: string;
   stack: string[];
   description: string;
+  learned: string;
   skills: string[];
   images: string[];
+  imageSize: string[];
   websiteLink: string;
   githubLink: string;
 }
@@ -21,7 +23,6 @@ const ProjectCard = (project: ProjectProps) => {
   const openModal = () => {
     // setIsModalOpen(!isModalOpen);
     setIsModalOpen((prev) => !prev);
-    console.log('isModalOpen', isModalOpen);
     document.documentElement.style.overflowY = 'hidden';
   };
 
@@ -35,11 +36,13 @@ const ProjectCard = (project: ProjectProps) => {
         sizes="[16,32]"
       />
       <article className={styles.project_summary_wrapper}>
-        <h3 className={styles.project_title}>{project.title}</h3>
+        <div>
+          <h3 className={styles.project_title}>{project.title}</h3>
 
-        <p className={styles.project_stack}>
-          {project.stack.slice(0, 3).join(' / ')}
-        </p>
+          <p className={styles.project_stack}>
+            {project.stack.slice(0, 3).join(' / ')}
+          </p>
+        </div>
         <button className={styles.project_button} onClick={openModal}>
           View more
         </button>

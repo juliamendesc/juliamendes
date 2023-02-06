@@ -23,6 +23,7 @@ export const Home: FC = () => {
       </main>
 
       <Footer />
+      <div id="portal"></div>
     </div>
   );
 };
