@@ -8,11 +8,16 @@ type ProjectsArrayProps = {
 
 const ProjectsSection = (projects: ProjectsArrayProps) => {
   return (
-    <div className={styles.projectsWrapper}>
-      {projects.projects.map((project) => (
-        <ProjectCard key={project.id} {...project} />
-      ))}
-    </div>
+    <section className={styles.sectionWrapper}>
+      <section className={styles.titleSection}>
+        <h1>Recent projects</h1>
+      </section>
+      <section className={styles.projectsWrapper}>
+        {projects.projects.map((project) => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
+      </section>
+    </section>
   );
 };
 
