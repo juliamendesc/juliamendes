@@ -61,84 +61,89 @@ const ContactForm: FC = () => {
   }, [isMessageSent, reset]);
 
   return (
-    <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
-      <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
-        <Tabs.Content value="tab1">
-          <form onSubmit={(data) => void handleSubmit(onSubmit)(data)}>
-            <fieldset className={styles.Fieldset}>
-              <label htmlFor="name" className={styles.Label}>
-                Your name
-              </label>
-              <input
-                className={styles.Input}
-                {...register('name', { required: true, minLength: 3 })}
-              />
-              {errors.name && (
-                <p>
-                  {`I wouldn't like to miss your name. Please don't forget to include
+    <>
+      <section className={styles.contactForm}>
+        <h1>Get in touch</h1>
+      </section>
+      <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
+        <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
+          <Tabs.Content value="tab1">
+            <form onSubmit={(data) => void handleSubmit(onSubmit)(data)}>
+              <fieldset className={styles.Fieldset}>
+                <label htmlFor="name" className={styles.Label}>
+                  Your name
+                </label>
+                <input
+                  className={styles.Input}
+                  {...register('name', { required: true, minLength: 3 })}
+                />
+                {errors.name && (
+                  <p>
+                    {`I wouldn't like to miss your name. Please don't forget to include
             it 🥺.`}
-                </p>
-              )}
-            </fieldset>
-            <fieldset className={styles.Fieldset}>
-              <label htmlFor="email" className={styles.Label}>
-                Your Email
-              </label>
-              <input
-                className={styles.Input}
-                {...register('email', {
-                  required: true,
-                  pattern:
-                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
-                  /*
+                  </p>
+                )}
+              </fieldset>
+              <fieldset className={styles.Fieldset}>
+                <label htmlFor="email" className={styles.Label}>
+                  Your Email
+                </label>
+                <input
+                  className={styles.Input}
+                  {...register('email', {
+                    required: true,
+                    pattern:
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
+                    /*
 									The email shouldn't contain spaces into the string
 									The email shouldn't contain special chars (<:, *,etc)
 									The email could contain dots in the middle of mail address before the @
 									The email could contain a double domain ( '.de.org' or similar rarity)
 									*/
-                })}
-              />
-              {errors.email && (
-                <p>{`Please insert a valid email to ensure I'm able to reply 📨.`}</p>
-              )}
-            </fieldset>
-            <fieldset className={styles.Fieldset}>
-              <label htmlFor="subject" className={styles.Label}>
-                Subject
-              </label>
-              <input
-                className={styles.Input}
-                {...register('subject', {
-                  required: true,
-                  minLength: 3,
-                  maxLength: 50,
-                })}
-              />
-              {errors.subject && <p>Please type a subject 📝.</p>}
-            </fieldset>
-            <fieldset className={styles.Fieldset}>
-              <label htmlFor="message" className={styles.Label}>
-                Please type your message
-              </label>
-              <textarea
-                className={styles.Input}
-                {...register('message', {
-                  required: true,
-                  minLength: 10,
-                  maxLength: 500,
-                })}
-              />
-              {errors.message && <p>Please type a nice message 🤗.</p>}
-            </fieldset>
-            <div className={styles.ButtonWrapper}>
-              <button type="submit" className={styles.Button}>
-                Submit
-              </button>
-            </div>
-          </form>
-        </Tabs.Content>
-      </Tabs.List>
-    </Tabs.Root>
+                  })}
+                />
+                {errors.email && (
+                  <p>{`Please insert a valid email to ensure I'm able to reply 📨.`}</p>
+                )}
+              </fieldset>
+              <fieldset className={styles.Fieldset}>
+                <label htmlFor="subject" className={styles.Label}>
+                  Subject
+                </label>
+                <input
+                  className={styles.Input}
+                  {...register('subject', {
+                    required: true,
+                    minLength: 3,
+                    maxLength: 50,
+                  })}
+                />
+                {errors.subject && <p>Please type a subject 📝.</p>}
+              </fieldset>
+              <fieldset className={styles.Fieldset}>
+                <label htmlFor="message" className={styles.Label}>
+                  Please type your message
+                </label>
+                <textarea
+                  className={styles.Input}
+                  {...register('message', {
+                    required: true,
+                    minLength: 10,
+                    maxLength: 500,
+                  })}
+                />
+                {errors.message && <p>Please type a nice message 🤗.</p>}
+              </fieldset>
+              <div className={styles.ButtonWrapper}>
+                <button type="submit" className={styles.Button}>
+                  Submit
+                </button>
+              </div>
+            </form>
+          </Tabs.Content>
+        </Tabs.List>
+      </Tabs.Root>
+    </>
   );
 };
 

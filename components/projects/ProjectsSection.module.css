@@ -1,8 +1,69 @@
+@media (min-width: 480px) {
+  .sectionWrapper {
+    max-width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .sectionWrapper {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .sectionWrapper {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .sectionWrapper {
+    max-width: 1280px;
+  }
+}
 .projectsWrapper {
-  margin-top: 5rem;
   margin-bottom: 5rem;
-  width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .projectsWrapper {
+    flex-direction: column;
+  }
+}
+.titleSection {
+  margin: 5rem 1rem 0 0;
+  width: initial;
+  text-align: left;
+}
+.titleSection h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+.titleSection h1::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #ff63ac;
+}
+@media (min-width: 480px) {
+  .titleSection {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .titleSection {
+    width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .titleSection {
+    width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .titleSection {
+    width: 1280px;
+  }
 }

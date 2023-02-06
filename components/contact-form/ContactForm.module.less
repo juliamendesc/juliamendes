@@ -56,7 +56,7 @@
     font-size: 15px;
     line-height: 1.75;
     color: var(--violet11);
-    box-shadow: 0 0 0 1px var(--violet7);
+    box-shadow: 0 0 0 1px var(--shadow--tertiary--dark);
 
     &:focus {
       box-shadow: 0 0 0 2px var(--violet8);
@@ -92,5 +92,42 @@
     &:focus {
       box-shadow: 0 0 0 2px #ff63ac;
     }
+  }
+}
+
+.contactForm {
+  margin: 2rem 1rem 0 0;
+  width: initial;
+  text-align: left;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 5rem;
+      height: 0.25rem;
+      background-color: #ff63ac;
+    }
+  }
+
+  @media (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 1024px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 1280px;
   }
 }

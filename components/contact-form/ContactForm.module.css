@@ -16,7 +16,7 @@
   outline: none;
 }
 .TabsRoot .TabsContent:focus {
-  box-shadow: 0 0 0 2px var(--color--primary--light);
+  box-shadow: 0 0 0 2px var(--mauve8);
 }
 .TabsRoot .TabsList {
   width: 100%;
@@ -40,7 +40,7 @@
   font-size: 1rem;
   line-height: 1;
   margin-bottom: 10px;
-  color: var(--text--secondary--dark);
+  color: var(--violet12);
 }
 .TabsRoot input,
 .TabsRoot textarea {
@@ -49,12 +49,12 @@
   padding: 0 10px;
   font-size: 15px;
   line-height: 1.75;
-  color: var(--text--primary--light);
-  box-shadow: 0 0 0 1px var(--shadow--primary--dark);
+  color: var(--violet11);
+  box-shadow: 0 0 0 1px var(--shadow--tertiary--dark);
 }
 .TabsRoot input:focus,
 .TabsRoot textarea:focus {
-  box-shadow: 0 0 0 2px var(--shadow--secondary--dark);
+  box-shadow: 0 0 0 2px var(--violet8);
 }
 .TabsRoot input {
   height: 2rem;
@@ -73,14 +73,50 @@
   line-height: 1;
   font-weight: 500;
   height: 35px;
-  background-color: var(--shadow--secondary--dark);
-  color: var(--text--primary--dark);
-  cursor: pointer;
+  background-color: #ffcece;
+  color: #680747;
 }
 .TabsRoot .Button:hover {
-  background-color: var(--shadow--tertiary--dark);
+  background-color: #ffc1c8;
 }
 .TabsRoot .Button:focus {
-  box-shadow: 0 0 0 2px var(--shadow--secondary--dark);
+  box-shadow: 0 0 0 2px #ff63ac;
 }
-/*# sourceMappingURL=ContactForm.module.css.map */
+.contactForm {
+  margin: 2rem 1rem 0 0;
+  width: initial;
+  text-align: left;
+}
+.contactForm h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+.contactForm h1::after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 0.25rem;
+  background-color: #ff63ac;
+}
+@media (min-width: 480px) {
+  .contactForm {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .contactForm {
+    width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .contactForm {
+    width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .contactForm {
+    width: 1280px;
+  }
+}

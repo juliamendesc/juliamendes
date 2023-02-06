@@ -18,9 +18,7 @@ export const Home: FC = () => {
         <MainCard />
 
         <ProjectsSection projects={projects} />
-        <section className={styles.contactForm}>
-          <h1>Get in touch</h1>
-        </section>
+
         <ContactForm />
       </main>
 
