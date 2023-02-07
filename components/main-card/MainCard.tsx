@@ -14,9 +14,13 @@ const MainCard: FC = () => {
             collection of experiences and achievements, I decided to pursue a
             career in programming, and this was the best decision ever.
           </p>
-          <Link href="#contact" scroll={true}>
-            <button>Contact me!</button>
-          </Link>
+          <div className={styles.textSection}>
+            <button>
+              <Link href="#contact" passHref scroll={true}>
+                Contact me!
+              </Link>
+            </button>
+          </div>
         </div>
         <div className={styles.imageCard}>
           <Image

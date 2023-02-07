@@ -34,6 +34,7 @@
   inline-size: 75%;
 }
 .mainCard div button {
+  margin-top: 2.5rem;
   padding: 1rem;
   line-height: 1.5rem;
   border: none;

@@ -1,3 +1,32 @@
+.container {
+  background: var(--background--light);
+  color: var(--text--primary--dark);
+}
+@media (max-width: 300px) {
+  .container {
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
 .main {
   margin: 1rem;
   min-height: 100vh;
@@ -26,8 +55,4 @@
   .logo img {
     filter: invert(1);
   }
-}
-.container {
-  background: var(--background--light);
-  color: var(--text--primary--dark);
 }
