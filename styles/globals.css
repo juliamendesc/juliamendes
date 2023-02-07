@@ -3,15 +3,16 @@
 *,
 ::after,
 ::before {
-  padding: 0;
-  margin: 0;
-  border: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
 }
 
-html,
-body {
+html {
+  scroll-behavior: smooth;
   font-family: inherit;
   width: 100vw;
   height: 100vh;
@@ -37,10 +38,33 @@ a {
   font-family: inherit;
 }
 
-:root {
-  scroll-behavior: smooth;
+#portal {
+  overflow-x: hidden;
+}
+
+:root,
+body {
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+
+  width: 100vw;
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+
   scroll-padding-top: 2rem;
 
+  font-family: 'Roboto', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  /* Smooth the font on the level of the pixel, as opposed to the subpixel. Switching from subpixel rendering to anti-aliasing for light text on dark backgrounds makes it look lighter. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Render text with grayscale anti-aliasing, as opposed to the subpixel. Switching from subpixel rendering to anti-aliasing for light text on dark backgrounds makes it look lighter. */
+
+  /* VARIABLES */
   --background--dark: linear-gradient(
     hsl(214, 59.4%, 15.3%),
     hsl(211, 85.1%, 27.4%)
@@ -54,8 +78,4 @@ a {
   --shadow--secondary--dark: #a393eb;
   --shadow--tertiary--dark: #ebc6ff;
   --border--primary--light: #eaeaea;
-}
-
-#portal {
-  overflow-x: hidden;
 }
