@@ -1,6 +1,7 @@
 .mainCard {
   margin-top: 3rem;
   position: relative;
+  margin-bottom: 5rem;
 }
 .mainCard div {
   width: 100%;
@@ -55,11 +56,6 @@
     margin: 0 1rem;
   }
 }
-@media (max-width: 480px) {
-  .mainCard div p {
-    font-size: 0.85rem;
-  }
-}
 .mainCard div .buttonWrapper {
   position: relative;
 }
@@ -94,7 +90,6 @@
 }
 @media (max-width: 480px) {
   .mainCard div button {
-    font-size: 0.85rem;
     padding: 0.5rem;
   }
 }
@@ -116,6 +111,11 @@
 @media (max-width: 768px) {
   .mainCard .imageCard {
     margin: 1rem auto 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .mainCard {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 480px) {
