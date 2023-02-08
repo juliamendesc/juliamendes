@@ -12,7 +12,6 @@ export interface ProjectProps {
   learned: string;
   skills: string[];
   images: string[];
-  imageSize: string[];
   websiteLink: string;
   githubLink: string;
 }
