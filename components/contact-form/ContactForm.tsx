@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './ContactForm.module.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import * as Tabs from '@radix-ui/react-tabs';
 import SectionTitle from 'components/section-title/SectionTitle';
 
 type Inputs = {
@@ -60,97 +59,120 @@ const ContactForm: FC = () => {
   }, [isMessageSent, reset]);
 
   return (
-    <>
+    <section className={styles.contactFormWrapper}>
       <SectionTitle title="Get in touch" />
-      <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
-        <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
-          <Tabs.Content value="tab1">
-            <form onSubmit={(data) => void handleSubmit(onSubmit)(data)}>
-              <fieldset className={styles.Fieldset}>
-                <label htmlFor="name" className={styles.Label}>
-                  Your name
-                </label>
-                <input
-                  className={styles.Input}
-                  {...register('name', { required: true, minLength: 3 })}
-                />
-                {errors.name && (
-                  <p className={styles.errorMessage}>
-                    {`I wouldn't like to miss your name. Please don't forget to include
+      <p className={styles.contactFormText}>
+        {`I'm always open to new opportunities and challenges. If you have any
+        questions or just want to say hi, feel free to contact me.`}
+      </p>
+      <form
+        onSubmit={(data) => void handleSubmit(onSubmit)(data)}
+        className={styles.contactForm}
+      >
+        <fieldset className={styles.formFieldContainer}>
+          <label
+            htmlFor="name"
+            className={styles.formFieldLabel}
+            id="formFieldLabel"
+          >
+            <span id="formFieldSpan" className={styles.formFieldSpan}>
+              Your name
+            </span>
+          </label>
+          <input
+            className={styles.formFieldInput}
+            {...register('name', { required: true, minLength: 3 })}
+          />
+          {errors.name && (
+            <p className={styles.errorMessage}>
+              {`I wouldn't like to miss your name. Please don't forget to include
             it 🥺.`}
-                  </p>
-                )}
-              </fieldset>
-              <fieldset className={styles.Fieldset}>
-                <label htmlFor="email" className={styles.Label}>
-                  Your Email
-                </label>
-                <input
-                  className={styles.Input}
-                  {...register('email', {
-                    required: true,
-                    pattern:
-                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
-                    /*
+            </p>
+          )}
+        </fieldset>
+        <fieldset className={styles.formFieldContainer}>
+          <label
+            htmlFor="email"
+            className={styles.formFieldLabel}
+            id="formFieldLabel"
+          >
+            <span id="formFieldSpan" className={styles.formFieldSpan}>
+              Your Email
+            </span>
+          </label>
+          <input
+            className={styles.formFieldInput}
+            {...register('email', {
+              required: true,
+              pattern:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
+              /*
 									The email shouldn't contain spaces into the string
 									The email shouldn't contain special chars (<:, *,etc)
 									The email could contain dots in the middle of mail address before the @
 									The email could contain a double domain ( '.de.org' or similar rarity)
 									*/
-                  })}
-                />
-                {errors.email && (
-                  <p
-                    className={styles.errorMessage}
-                  >{`Please insert a valid email to ensure I'm able to reply 📨.`}</p>
-                )}
-              </fieldset>
-              <fieldset className={styles.Fieldset}>
-                <label htmlFor="subject" className={styles.Label}>
-                  Subject
-                </label>
-                <input
-                  className={styles.Input}
-                  {...register('subject', {
-                    required: true,
-                    minLength: 3,
-                    maxLength: 50,
-                  })}
-                />
-                {errors.subject && (
-                  <p className={styles.errorMessage}>
-                    Please type a subject 📝.
-                  </p>
-                )}
-              </fieldset>
-              <fieldset className={styles.Fieldset}>
-                <label htmlFor="message" className={styles.Label}>
-                  Please type your message
-                </label>
-                <textarea
-                  className={styles.Input}
-                  {...register('message', {
-                    required: true,
-                    minLength: 10,
-                    maxLength: 500,
-                  })}
-                />
-                {errors.message && (
-                  <p className={styles.errorMessage}>
-                    Please type a nice message 🤗.
-                  </p>
-                )}
-              </fieldset>
-              <div className={styles.ButtonWrapper}>
-                <button type="submit" className={styles.Button}>
-                  Submit
-                </button>
-              </div>
-            </form>
-          </Tabs.Content>
-        </Tabs.List>
-      </Tabs.Root>
-    </>
+            })}
+          />
+          {errors.email && (
+            <p
+              className={styles.errorMessage}
+            >{`Please insert a valid email to ensure I'm able to reply 📨.`}</p>
+          )}
+        </fieldset>
+        <fieldset className={styles.formFieldContainer}>
+          <label
+            htmlFor="subject"
+            className={styles.formFieldLabel}
+            id="formFieldLabel"
+          >
+            <span id="formFieldSpan" className={styles.formFieldSpan}>
+              Subject
+            </span>
+          </label>
+          <input
+            className={styles.formFieldInput}
+            {...register('subject', {
+              required: true,
+              minLength: 3,
+              maxLength: 50,
+            })}
+          />
+          {errors.subject && (
+            <p className={styles.errorMessage}>Please type a subject 📝.</p>
+          )}
+        </fieldset>
+        <fieldset className={styles.formFieldContainer}>
+          <label
+            htmlFor="message"
+            className={styles.formFieldLabel}
+            id="formFieldLabel"
+          >
+            <span id="formFieldSpan" className={styles.formFieldSpan}>
+              Please type your message
+            </span>
+          </label>
+          <textarea
+            className={styles.formFieldTextArea}
+            {...register('message', {
+              required: true,
+              minLength: 3,
+              maxLength: 500,
+            })}
+          />
+          {errors.message && (
+            <p className={styles.errorMessage}>
+              Please type a nice message 🤗.
+            </p>
+          )}
+        </fieldset>
+        <div className={styles.ButtonWrapper}>
+          <button type="submit" className={styles.submitButton}>
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
   );
 };
 

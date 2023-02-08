@@ -14,11 +14,10 @@
     "pages/*"
   ],
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-icons": "^1.1.1",
-    "@radix-ui/react-tabs": "^1.0.2",
     "@types/node": "18.11.19",
-    "@types/nodemailer": "^6.4.7",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "dotenv": "^16.0.3",
@@ -29,10 +28,11 @@
     "probe-image-size": "^7.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.43.0",
+    "react-hook-form": "^7.43.1",
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.7",
     "@types/probe-image-size": "^7.2.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "eslint-config-prettier": "^8.6.0",
