@@ -75,4 +75,8 @@ body {
   --shadow--secondary--dark: #a393eb;
   --shadow--tertiary--dark: #ebc6ff;
   --border--primary--light: #eaeaea;
+  --base--white: #fff;
+  --base--black: #000;
+  --base--red: #ff0000;
+  --base--pink: #ff63ac;
 }

@@ -1,77 +1,9 @@
-.TabsRoot {
+.ButtonWrapper {
   display: flex;
-  width: 500px;
+  justify-content: flex-end;
+  margin-top: 20px;
 
-  .ButtonWrapper {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-
-  .TabsContent {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: white;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    outline: none;
-
-    &:focus {
-      box-shadow: 0 0 0 2px var(--mauve8);
-    }
-  }
-
-  .TabsList {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 510px) {
-      align-items: center;
-    }
-  }
-
-  fieldset {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  label {
-    font-size: 1rem;
-    line-height: 1;
-    margin-bottom: 10px;
-    color: var(--violet12);
-  }
-
-  input,
-  textarea {
-    flex: 1 1 auto;
-    border-radius: 4px;
-    padding: 0 10px;
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--violet11);
-    box-shadow: 0 0 0 1px var(--shadow--primary--dark);
-
-    &:focus {
-      box-shadow: 0 0 0 2px var(--violet8);
-    }
-  }
-
-  input {
-    height: 2rem;
-  }
-
-  textarea {
-    height: 10rem;
-  }
-
-  .Button {
+  .submitButton {
     margin-bottom: 1rem;
 
     display: inline-flex;
@@ -83,58 +15,143 @@
     line-height: 1;
     font-weight: 500;
     height: 35px;
-    color: #fff;
+    color: var(--base--white);
     background-color: var(--shadow--secondary--dark);
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
       border 0.2s ease-in-out;
 
     &:hover {
-      background-color: #fff;
-      color: #ff63ac;
-      border: 1px solid #ff63ac;
+      background-color: var(--base--white);
+      color: var(--base--pink);
+      border: 1px solid var(--base--pink);
     }
+  }
+
+  @media (max-width: 768px) {
+    align-self: center;
+  }
+
+  @media (max-width: 380px) {
+    width: 100%;
   }
 }
 
-.contactForm {
-  margin: 2rem 1rem 0 0;
-  width: initial;
-  text-align: left;
+.contactFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 3rem;
-    margin-bottom: 1.5rem;
+  width: 100%;
 
-    &::after {
-      content: '';
-      display: block;
-      width: 5rem;
-      height: 0.25rem;
-      background-color: #ff63ac;
-    }
+  @media (max-width: 768px) {
   }
+}
 
-  @media (min-width: 480px) {
-    width: 480px;
+.contactFormText {
+  font-size: 1rem;
+  padding-bottom: 20px;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+}
+
+.contactForm {
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  row-gap: 20px;
+  padding-bottom: 40px;
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 
   @media (min-width: 768px) {
-    width: 768px;
+    width: 560px;
+  }
+}
+
+.formFieldContainer {
+  position: relative;
+  padding: 5px 0;
+
+  @media (max-width: 768px) {
+    align-self: center;
+    width: 90%;
   }
 
-  @media (min-width: 1024px) {
-    width: 1024px;
+  @media (min-width: 768px) {
+    width: 560px;
+  }
+}
+
+.formFieldLabel {
+  align-self: flex-start;
+
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 1rem;
+
+  color: var(--shadow--primary--dark);
+  border-bottom: 1px solid var(--shadow--primary--dark);
+
+  pointer-events: none;
+  overflow: hidden;
+
+  .formFieldSpan {
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease;
+  }
+}
+
+.formFieldInput {
+  width: 100%;
+
+  color: var(--text--primary--dark);
+  font-size: 1rem;
+
+  padding-top: 15px;
+  border: none;
+  outline: none;
+
+  &:focus {
+    background-color: var(--text--secondary--dark);
   }
 
-  @media (min-width: 1280px) {
-    width: 1280px;
+  &:not(:focus):invalid {
+    color: var(--background--light);
+  }
+}
+
+.formFieldTextArea {
+  width: 100%;
+  height: 100px;
+
+  color: var(--text--primary--dark);
+  font-size: 1rem;
+
+  padding-bottom: 70px;
+  border: none;
+  outline: none;
+  resize: none;
+
+  &:focus {
+    background-color: var(--text--secondary--dark);
   }
 }
 
 .errorMessage {
-  color: red;
+  color: var(--base--red);
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }

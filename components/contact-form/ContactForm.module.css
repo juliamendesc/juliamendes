@@ -1,68 +1,9 @@
-.TabsRoot {
-  display: flex;
-  width: 500px;
-}
-.TabsRoot .ButtonWrapper {
+.ButtonWrapper {
   display: flex;
   justify-content: flex-end;
   margin-top: 20px;
 }
-.TabsRoot .TabsContent {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: white;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  outline: none;
-}
-.TabsRoot .TabsContent:focus {
-  box-shadow: 0 0 0 2px var(--mauve8);
-}
-.TabsRoot .TabsList {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.TabsRoot .TabsList h2 {
-  margin-bottom: 1rem;
-}
-@media (max-width: 510px) {
-  .TabsRoot .TabsList {
-    align-items: center;
-  }
-}
-.TabsRoot fieldset {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-.TabsRoot label {
-  font-size: 1rem;
-  line-height: 1;
-  margin-bottom: 10px;
-  color: var(--violet12);
-}
-.TabsRoot input,
-.TabsRoot textarea {
-  flex: 1 1 auto;
-  border-radius: 4px;
-  padding: 0 10px;
-  font-size: 15px;
-  line-height: 1.75;
-  color: var(--violet11);
-  box-shadow: 0 0 0 1px var(--shadow--primary--dark);
-}
-.TabsRoot input:focus,
-.TabsRoot textarea:focus {
-  box-shadow: 0 0 0 2px var(--violet8);
-}
-.TabsRoot input {
-  height: 2rem;
-}
-.TabsRoot textarea {
-  height: 10rem;
-}
-.TabsRoot .Button {
+.ButtonWrapper .submitButton {
   margin-bottom: 1rem;
   display: inline-flex;
   align-items: center;
@@ -73,56 +14,120 @@
   line-height: 1;
   font-weight: 500;
   height: 35px;
-  color: #fff;
+  color: var(--base--white);
   background-color: var(--shadow--secondary--dark);
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
     border 0.2s ease-in-out;
 }
-.TabsRoot .Button:hover {
-  background-color: #fff;
-  color: #ff63ac;
-  border: 1px solid #ff63ac;
+.ButtonWrapper .submitButton:hover {
+  background-color: var(--base--white);
+  color: var(--base--pink);
+  border: 1px solid var(--base--pink);
+}
+@media (max-width: 768px) {
+  .ButtonWrapper {
+    align-self: center;
+  }
+}
+@media (max-width: 380px) {
+  .ButtonWrapper {
+    width: 100%;
+  }
+}
+.contactFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+}
+.contactFormText {
+  font-size: 1rem;
+  padding-bottom: 20px;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
 }
 .contactForm {
-  margin: 2rem 1rem 0 0;
-  width: initial;
-  text-align: left;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 20px;
+  padding-bottom: 40px;
 }
-.contactForm h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 3rem;
-  margin-bottom: 1.5rem;
-}
-.contactForm h1::after {
-  content: '';
-  display: block;
-  width: 5rem;
-  height: 0.25rem;
-  background-color: #ff63ac;
-}
-@media (min-width: 480px) {
+@media (max-width: 768px) {
   .contactForm {
-    width: 480px;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
   .contactForm {
-    width: 768px;
+    width: 560px;
   }
 }
-@media (min-width: 1024px) {
-  .contactForm {
-    width: 1024px;
+.formFieldContainer {
+  position: relative;
+  padding: 5px 0;
+}
+@media (max-width: 768px) {
+  .formFieldContainer {
+    align-self: center;
+    width: 90%;
   }
 }
-@media (min-width: 1280px) {
-  .contactForm {
-    width: 1280px;
+@media (min-width: 768px) {
+  .formFieldContainer {
+    width: 560px;
   }
+}
+.formFieldLabel {
+  align-self: flex-start;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  color: var(--shadow--primary--dark);
+  border-bottom: 1px solid var(--shadow--primary--dark);
+  pointer-events: none;
+  overflow: hidden;
+}
+.formFieldLabel .formFieldSpan {
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+}
+.formFieldInput {
+  width: 100%;
+  color: var(--text--primary--dark);
+  font-size: 1rem;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+}
+.formFieldInput:focus {
+  background-color: var(--text--secondary--dark);
+}
+.formFieldInput:not(:focus):invalid {
+  color: var(--background--light);
+}
+.formFieldTextArea {
+  width: 100%;
+  height: 100px;
+  color: var(--text--primary--dark);
+  font-size: 1rem;
+  padding-bottom: 70px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.formFieldTextArea:focus {
+  background-color: var(--text--secondary--dark);
 }
 .errorMessage {
-  color: red;
+  color: var(--base--red);
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
