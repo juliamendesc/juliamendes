@@ -84,12 +84,12 @@
 .project_button:hover {
   background-size: 100% 100%;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .project_button {
     font-size: 1rem;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 480px) {
   .project_button {
     font-size: 0.75rem;
   }
