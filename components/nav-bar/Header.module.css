@@ -23,18 +23,20 @@
 }
 @media (max-width: 380px) {
   .container {
-    margin-left: 1rem;
     font-size: 1.75rem;
+    position: relative;
+    left: 1.25rem;
+    margin: 0 auto;
   }
 }
 @media (min-width: 380px) and (max-width: 768px) {
   .container {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .container {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 .css_mode {
