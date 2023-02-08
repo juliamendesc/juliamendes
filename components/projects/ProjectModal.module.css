@@ -31,10 +31,12 @@
   }
 }
 .project_image {
-  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
+  object-fit: contain;
+  width: 100% !important;
+  height: unset !important;
 }
 @media (max-height: 430px) {
   .project_image {

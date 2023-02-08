@@ -1,7 +1,7 @@
 .container {
-  margin: 0 auto;
+  margin-left: 5rem;
   width: 100%;
-  padding: 2rem 0;
+  padding-top: 2rem;
   font-size: 1.875rem;
 }
 .container nav {
@@ -21,24 +21,20 @@
   transition: transform 0.5s;
   transform: scale(1.25);
 }
-@media (min-width: 480px) {
+@media (max-width: 380px) {
   .container {
-    max-width: 480px;
+    margin-left: 1rem;
+    font-size: 1.75rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 380px) and (max-width: 768px) {
   .container {
-    max-width: 768px;
+    font-size: 2rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
+    font-size: 2.25rem;
   }
 }
 .css_mode {

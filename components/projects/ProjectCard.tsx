@@ -33,7 +33,7 @@ const ProjectCard = (project: ProjectProps) => {
         alt="icon"
         className={styles.project_image}
         fill
-        sizes="[16,32]"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
       <article className={styles.project_summary_wrapper}>
         <div>

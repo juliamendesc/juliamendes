@@ -77,14 +77,30 @@ const ProjectModal: FC<ProjectModalProps> = ({
                       role="presentation"
                       onClick={() => updateImage(-1)}
                       style={{ left: '0px' }}
-                    ></div>
+                    >
+                      <Image
+                        src="/assets/chevrons-left.svg"
+                        alt="chevrons left"
+                        width={20}
+                        height={20}
+                        className={styles.sliderImage}
+                      />
+                    </div>
 
                     <div
                       className={styles.slider}
                       role="presentation"
                       onClick={() => updateImage(1)}
                       style={{ right: '0px' }}
-                    ></div>
+                    >
+                      <Image
+                        src="/assets/chevrons-right.svg"
+                        alt="chevrons right"
+                        width={20}
+                        height={20}
+                        className={styles.sliderImage}
+                      />
+                    </div>
                   </>
                 )}
               </div>

@@ -1,5 +1,5 @@
 .mainCard {
-  margin: 0 auto;
+  margin-top: 3rem;
   position: relative;
 }
 .mainCard div {
@@ -34,7 +34,6 @@
   inline-size: 75%;
 }
 .mainCard div button {
-  margin-top: 2.5rem;
   padding: 1rem;
   line-height: 1.5rem;
   border: none;
@@ -91,5 +90,15 @@
 @media (min-width: 1280px) {
   .mainCard {
     max-width: 1280px;
+  }
+}
+@media (min-width: 1440px) {
+  .mainCard {
+    max-width: 1440px;
+  }
+}
+@media (min-width: 1600px) {
+  .mainCard {
+    max-width: 1600px;
   }
 }

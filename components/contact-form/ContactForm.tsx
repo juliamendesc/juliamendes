@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import styles from './ContactForm.module.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as Tabs from '@radix-ui/react-tabs';
+import SectionTitle from 'components/section-title/SectionTitle';
 
 type Inputs = {
   name: string;
@@ -60,9 +61,7 @@ const ContactForm: FC = () => {
 
   return (
     <>
-      <section className={styles.contactForm} id="contact">
-        <h1>Get in touch</h1>
-      </section>
+      <SectionTitle title="Get in touch" />
       <Tabs.Root className={styles.TabsRoot} defaultValue="tab1">
         <Tabs.List className={styles.TabsList} aria-label="Manage contact form">
           <Tabs.Content value="tab1">
