@@ -12,6 +12,7 @@
 @media (max-width: 768px) {
   .projectsWrapper {
     flex-direction: column;
+    margin: 1rem;
   }
 }
 .otherProjectsWrapper {
