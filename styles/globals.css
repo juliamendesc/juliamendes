@@ -9,6 +9,7 @@
 
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 html {
@@ -50,10 +51,6 @@ body {
   overflow-x: hidden;
 
   width: 100vw;
-
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 
   scroll-padding-top: 2rem;
 

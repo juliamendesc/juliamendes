@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectCard, { ProjectProps } from './ProjectCard';
 import styles from './ProjectsSection.module.css';
+import SectionTitle from 'components/section-title/SectionTitle';
 
 type ProjectsArrayProps = {
   projects: ProjectProps[];
@@ -8,16 +9,14 @@ type ProjectsArrayProps = {
 
 const ProjectsSection = (projects: ProjectsArrayProps) => {
   return (
-    <section className={styles.sectionWrapper}>
-      <section className={styles.titleSection}>
-        <h1>Recent projects</h1>
-      </section>
+    <>
+      <SectionTitle title="Recent projects" />
       <section className={styles.projectsWrapper}>
         {projects.projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
       </section>
-    </section>
+    </>
   );
 };
 
