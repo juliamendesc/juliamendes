@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import styles from './MainCard.module.css';
 import React, { FC } from 'react';
-import Link from 'next/link';
 
 const MainCard: FC = () => {
+  const scrollToContact = () => {
+    const elemContact = document.getElementById('contact-form');
+
+    elemContact?.scrollIntoView();
+  };
+
   return (
     <section className={styles.mainCard}>
       <div>
@@ -14,9 +19,9 @@ const MainCard: FC = () => {
             collection of experiences and achievements, I decided to pursue a
             career in programming, and this was the best decision ever.
           </p>
-          <Link href="#contact" scroll={true}>
-            <button>Contact me!</button>
-          </Link>
+          <div className={styles.buttonWrapper}>
+            <button onClick={scrollToContact}>Contact me!</button>
+          </div>
         </div>
         <div className={styles.imageCard}>
           <Image

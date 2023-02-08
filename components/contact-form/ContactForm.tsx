@@ -59,7 +59,7 @@ const ContactForm: FC = () => {
   }, [isMessageSent, reset]);
 
   return (
-    <section className={styles.contactFormWrapper}>
+    <section className={styles.contactFormWrapper} id="contact-form">
       <SectionTitle title="Get in touch" />
       <p className={styles.contactFormText}>
         {`I'm always open to new opportunities and challenges. If you have any

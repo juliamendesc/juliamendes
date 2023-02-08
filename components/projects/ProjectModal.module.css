@@ -7,6 +7,11 @@
   background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
+@media (max-height: 430px) {
+  .modal_background {
+    margin-bottom: 1rem;
+  }
+}
 .modal_body {
   display: flex;
   flex-direction: column;
@@ -64,7 +69,7 @@
   top: 0;
 }
 .text_section {
-  padding: 14px;
+  padding: 0.8rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -87,22 +92,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 15px;
-  font-size: 12px;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
 }
 @media (min-height: 430px) and (min-width: 321px) {
   .text {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 .title {
   width: 100%;
   color: #000;
-  font-size: 16px;
+  font-size: 1rem;
 }
 @media (min-height: 430px) and (min-width: 321px) {
   .title {
-    font-size: 22px;
+    font-size: 1.5rem;
   }
 }
 .title::before {
@@ -111,19 +116,19 @@
   float: left;
   background: url('/assets/play.svg') no-repeat;
   background-size: contain;
-  height: 15px;
-  padding-right: 20px;
+  height: 1rem;
+  padding-right: 2rem;
 }
 @media (min-height: 430px) and (min-width: 321px) {
   .title::before {
-    height: 25px;
-    padding-right: 30px;
+    height: 2rem;
+    padding-right: 2.5rem;
   }
 }
 .description {
   width: 100%;
   white-space: pre-line;
-  padding: 10px 0px;
+  padding: 0.65 0px;
   font-size: 1em;
 }
 .stack {
@@ -147,7 +152,7 @@
 }
 .cross_button {
   cursor: pointer;
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: thin;
 }
 .links {
@@ -156,4 +161,8 @@
   justify-content: space-between;
   align-items: center;
   width: 250px;
+}
+.links,
+.links button {
+  cursor: pointer;
 }

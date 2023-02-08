@@ -2,6 +2,8 @@
   margin-top: 3rem;
   position: relative;
 
+  margin-bottom: 5rem;
+
   div {
     width: 100%;
     height: 100%;
@@ -10,6 +12,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -28,12 +31,34 @@
       font-weight: 700;
       line-height: 3rem;
       text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin: 0 1rem;
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
     }
 
     p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
       inline-size: 75%;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        inline-size: 90%;
+        margin: 0 1rem;
+      }
+    }
+
+    .buttonWrapper {
+      position: relative;
     }
 
     button {
@@ -48,12 +73,26 @@
       background-color: var(--shadow--secondary--dark);
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
         border 0.2s ease-in-out;
+
       position: absolute;
+      top: 5px;
 
       &:hover {
         background-color: #fff;
         color: #ff63ac;
         border: 1px solid #ff63ac;
+      }
+
+      @media (max-width: 768px) {
+        position: relative;
+        top: unset;
+        font-size: 1rem;
+        padding: 0.8rem;
+        margin: 0 1rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.5rem;
       }
     }
   }
@@ -75,6 +114,10 @@
     @media (max-width: 768px) {
       margin: 1rem auto 2rem;
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
   }
 
   @media (min-width: 480px) {
