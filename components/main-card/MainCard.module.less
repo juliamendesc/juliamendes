@@ -10,6 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -28,12 +29,38 @@
       font-weight: 700;
       line-height: 3rem;
       text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin: 0 1rem;
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
     }
 
     p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
       inline-size: 75%;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        inline-size: 90%;
+        margin: 0 1rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.85rem;
+      }
+    }
+
+    .buttonWrapper {
+      position: relative;
     }
 
     button {
@@ -48,12 +75,27 @@
       background-color: var(--shadow--secondary--dark);
       transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
         border 0.2s ease-in-out;
+
       position: absolute;
+      top: 5px;
 
       &:hover {
         background-color: #fff;
         color: #ff63ac;
         border: 1px solid #ff63ac;
+      }
+
+      @media (max-width: 768px) {
+        position: relative;
+        top: unset;
+        font-size: 1rem;
+        padding: 0.8rem;
+        margin: 0 1rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.85rem;
+        padding: 0.5rem;
       }
     }
   }
