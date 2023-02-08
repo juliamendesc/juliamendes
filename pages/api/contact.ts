@@ -27,11 +27,11 @@ const transporter = nodemailer.createTransport({
 
 export default function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   const mailData = {
-    from: `Website Contact Form <${req.body.email}>`,
+    from: `Website Contact Form <${GMAIL_USER}>`,
     to: GMAIL_FORWARD_TO,
     subject: `${req.body.subject}`,
     text: `${req.body.message} `,
-    html: `<div>From: ${req.body.name}</div>\n<div>${req.body.message}</div>`,
+    html: `<div>From: ${req.body.name} - ${req.body.email} </div>\n<div>${req.body.message}</div>`,
   };
 
   transporter
