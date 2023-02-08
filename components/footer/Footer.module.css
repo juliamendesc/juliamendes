@@ -12,16 +12,24 @@
   align-items: center;
   flex-grow: 1;
 }
-@media (prefers-color-scheme: dark) {
+@media (max-width: 768px) {
   .footer {
-    border-color: #222;
+    flex-direction: column;
+    padding: 1rem 0;
   }
-  .logo img {
-    filter: invert(1);
+}
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.5rem 0;
   }
 }
 .logoWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .logoWrapper {
+    margin-top: 0.5rem;
+  }
 }

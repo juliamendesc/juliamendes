@@ -12,30 +12,14 @@
     align-items: center;
     flex-grow: 1;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  .footer {
-    border-color: #222;
-  }
-  .logo img {
-    filter: invert(1);
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 0;
   }
 
-  @media (min-width: 480px) {
-    max-width: 480px;
-  }
-
-  @media (min-width: 768px) {
-    max-width: 768px;
-  }
-
-  @media (min-width: 1024px) {
-    max-width: 1024px;
-  }
-
-  @media (min-width: 1280px) {
-    max-width: 1280px;
+  @media (max-width: 480px) {
+    padding: 0.5rem 0;
   }
 }
 
@@ -43,4 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+  }
 }
