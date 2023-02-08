@@ -71,11 +71,6 @@
     margin: 0 1rem;
   }
 }
-@media (max-width: 480px) {
-  .mainCard div p {
-    font-size: 0.85rem;
-  }
-}
 .mainCard div .buttonWrapper {
   position: relative;
 }
@@ -111,7 +106,6 @@
 }
 @media (max-width: 480px) {
   .mainCard div button {
-    font-size: 0.85rem;
     padding: 0.5rem;
   }
 }
