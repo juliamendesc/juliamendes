@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import styles from './ContactForm.module.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import SectionTitle from 'components/section-title/SectionTitle';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 type Inputs = {
   name: string;
