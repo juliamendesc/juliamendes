@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import styles from './ContactForm.module.css';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import SectionTitle from 'components/section-title/SectionTitle';
+import { ToastContainer, toast } from 'react-toastify';
 
 type Inputs = {
   name: string;
@@ -40,14 +41,31 @@ const ContactForm: FC = () => {
     })
       .then((res) => {
         if (res.status === 200) {
-          console.log('Message sent successfully! 🎉', res);
           setIsMessageSent(true);
-          return res.json();
+          toast.success('Message sent successfully! 🎉', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+          });
         }
-        console.log('Message not sent', res);
       })
       .catch((err) => {
-        console.log('Error sending message', err);
+        toast.error('Error sending message. Please try again later.', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
+        console.error(err);
       });
   };
 
