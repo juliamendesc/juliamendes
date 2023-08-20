@@ -35,12 +35,14 @@ const EmailTemplate = ({
     <Preview>{username}, tem alguém interessado nos seus serviços!</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img
-          src={`${baseUrl}/static/digital-atlantico.png`}
-          width="120"
-          height="80"
-          alt="Logo Agência Digital Atlântico"
-        />
+        {baseUrl !== '' && (
+          <Img
+            src={`${baseUrl}/static/digital-atlantico.png`}
+            width="120"
+            height="80"
+            alt="Logo Agência Digital Atlântico"
+          />
+        )}
 
         <Text style={title}>
           Olá <strong>{username}</strong>, alguém está interessado nos seus
