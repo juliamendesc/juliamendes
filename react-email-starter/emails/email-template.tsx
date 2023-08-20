@@ -32,9 +32,7 @@ const EmailTemplate = ({
 }: EmailTemplateProps) => (
   <Html>
     <Head />
-    <Preview>
-      A fine-grained personal access token has been added to your account
-    </Preview>
+    <Preview>{username}, tem alguém interessado nos seus serviços!</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
