@@ -3,8 +3,6 @@ import {
   Container,
   Head,
   Html,
-  Img,
-  Link,
   Preview,
   Section,
   Text,
@@ -19,12 +17,8 @@ interface EmailTemplateProps {
   subject?: string;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : '';
-
 const EmailTemplate = ({
-  username = 'Diogo',
+  username = 'Julia',
   sender = '',
   senderEmail = '',
   message = '',
@@ -35,15 +29,6 @@ const EmailTemplate = ({
     <Preview>{username}, tem alguém interessado nos seus serviços!</Preview>
     <Body style={main}>
       <Container style={container}>
-        {baseUrl !== '' && (
-          <Img
-            src={`${baseUrl}/static/digital-atlantico.png`}
-            width="120"
-            height="80"
-            alt="Logo Agência Digital Atlântico"
-          />
-        )}
-
         <Text style={title}>
           Olá <strong>{username}</strong>, alguém está interessado nos seus
           serviços.
@@ -104,24 +89,6 @@ const section = {
 const text = {
   margin: '0 0 10px 0',
   textAlign: 'left' as const,
-};
-
-const button = {
-  fontSize: '14px',
-  backgroundColor: '#28a745',
-  color: '#fff',
-  lineHeight: 1.5,
-  borderRadius: '0.5em',
-  padding: '0.75em 1.5em',
-};
-
-const links = {
-  textAlign: 'center' as const,
-};
-
-const link = {
-  color: '#0366d6',
-  fontSize: '12px',
 };
 
 const footer = {

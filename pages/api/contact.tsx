@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import { render } from '@react-email/render';
-import EmailTemplate from 'react-email-starter/emails/email-template';
+import EmailTemplate from '../../react-email-starter/emails/email-template';
 
 const {
   GMAIL_USER,
